@@ -4,19 +4,20 @@ import Carousel from 'react-elastic-carousel';
 import Offers from '../../assets/Offers.png';
 import api from '../../services/api';
 import { Container, CategoryImg, ContainerItems, Image, Button } from "./styles";
-import formatCurrnecy from "../formatCurrency";
-function OffersCarousel() {
+import formatCurrnecy from "../../utils/formatCurrency";
+
+export function OffersCarousel() {
     const [offers, setOffers] = useState([])
 
     useEffect(() => {
         async function loadOffers() {
             const { data } = await api.get('products')
 
-            const onlYOffers = data.filter(product => product.offer).map(product => {
+            const onlyOffers = data.filter(product => product.offer).map(product => {
                 return { ...product, formatedPrice: formatCurrnecy(product.price) }
             })
 
-            setOffers(onlYOffers)
+            setOffers(onlyOffers)
         }
 
         loadOffers()
@@ -49,5 +50,3 @@ function OffersCarousel() {
         </Container>
     )
 }
-
-export default OffersCarousel

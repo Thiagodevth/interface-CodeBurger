@@ -9,7 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import api from '../../services/api'
 
 import { useUser } from "../../hooks/UserContext";
-import Button from "../../components/Button";
+import { Button } from "../../components";
 import LoginImg from "../../assets/login-image.svg";
 import Logo from "../../assets/logo.svg";
 import {
