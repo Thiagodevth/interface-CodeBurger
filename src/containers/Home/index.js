@@ -4,7 +4,7 @@ import HomeLogo from '../../assets/Home-logo.svg'
 import { Container, HomeImg } from "./styles";
 import { CategoryCarousel, OffersCarousel } from "../../components";
 
-function Home() {
+export function Home() {
     return (
         <Container>
             <HomeImg src={HomeLogo} alt="logo-da-home" />
@@ -14,4 +14,3 @@ function Home() {
     )
 }
 
-export default Home

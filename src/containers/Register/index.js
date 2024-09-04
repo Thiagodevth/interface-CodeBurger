@@ -21,7 +21,7 @@ import {
    ErrorMessege
 } from './styles'
 
-function Register() {
+export function Register() {
    const schema = Yup.object().shape({
       name: Yup.string()
          .required('O seu nome é obrigatório'),
@@ -106,4 +106,3 @@ function Register() {
    )
 }
 
-export default Register

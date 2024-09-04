@@ -9,7 +9,8 @@ export const UserProvider = ({ children }) => {
     const putUserData = async userInfo => {
         setUserData(userInfo)
 
-        await localStorage.setItem('codeburger:userData', JSON.stringify(userInfo))
+        await localStorage.setItem(
+            'codeburger:userData', JSON.stringify(userInfo))
     }
 
     useEffect(() => {
@@ -34,7 +35,7 @@ export const useUser = () => {
     const context = useContext(UserContext)
 
     if (!context) {
-        throw new Error('asdjfbn')
+        throw new Error('useContext must used with UserContext')
     }
     return context
 }

@@ -12,11 +12,11 @@ import {
 } from "./styles";
 import { CardProduct } from "../../components";
 
-function Products() {
+export function Products() {
     const [categories, setCategories] = useState([])
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
-    const [actveCategory, setActveCategory] = useState(0)
+    const [activeCategory, setActiveCategory] = useState(0)
 
     useEffect(() => {
         async function loadCategories() {
@@ -42,16 +42,16 @@ function Products() {
     }, [])
 
     useEffect(() => {
-        if (actveCategory === 0) {
+        if (activeCategory === 0) {
             setFilteredProducts(products)
         } else {
             const newFilteredProducts = products.filter(
-                product => product.category_id === actveCategory
+                product => product.category_id === activeCategory
             )
 
             setFilteredProducts(newFilteredProducts)
         }
-    }, [actveCategory, products])
+    }, [activeCategory, products])
 
     return (
         <Container>
@@ -61,8 +61,8 @@ function Products() {
                     <CategoryButton
                         type="button"
                         key={category.id}
-                        isActiveCategory={actveCategory === category.id}
-                        onClick={() => { setActveCategory(category.id) }} >
+                        isActiveCategory={activeCategory === category.id}
+                        onClick={() => { setActiveCategory(category.id) }} >
                         {category.name}</CategoryButton>
                 )}
             </CategoriesMenu>
@@ -76,4 +76,3 @@ function Products() {
     )
 }
 
-export default Products
