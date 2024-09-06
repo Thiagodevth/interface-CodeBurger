@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
    background-color: #ffffff;
-   box-shadow: 10px 40px rgba(0, 0, 0, 0.03);
+   box-shadow: 10px 10px rgba(0, 0, 0, 0.03);
    border-radius: 20px;
    padding: 10px;
-   width: max-content;
+   width: 57%;
+   margin-bottom: 40px;
    `;
 
 export const Header = styled.div`
@@ -14,7 +15,7 @@ export const Header = styled.div`
    padding: 10px;
    border-bottom: 1px solid #b5b5b5;
    p{
-      font-size: 16px;
+      font-size: 14px;
       color: #b5b5b5;
    }
    ;`
@@ -22,18 +23,18 @@ export const Header = styled.div`
 export const Body = styled.div`
    display: grid;
    grid-template-columns: repeat(5,1fr);
-   width: max-content;
+   
    gap: 10px 15px;
    padding: 10px;
    align-items: center;
 
    img{
       border-radius: 10px;
-      width: 120px;
+      width: 85px;
    }
 
    p{
-      font-size: 16px;
+      font-size: 14px;
       color: #000000;
    }
 
@@ -43,11 +44,26 @@ export const Body = styled.div`
       align-items: center;
 
       button{
-         height: 30px;
+         height: 25px;
+         width: 25px;
          background: transparent;
          border: none;
+         border-radius: 50%;
+         background: #e5e5e5;
          cursor: pointer;
+         font-weight: bold;
 
+         background-color: #9758a6;
+         color: #efefef;
+         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+         border: none;
+         transition: 0.2s;
+
+      }
+      button:hover{
+         border: 2px solid #9758a6;
+         background-color: #efefef;
+         color: #9758a6;
       }
       p{
          margin-top: 0px;
