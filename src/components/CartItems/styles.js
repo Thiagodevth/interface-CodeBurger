@@ -16,7 +16,7 @@ export const Header = styled.div`
    border-bottom: 1px solid #b5b5b5;
    p{
       font-size: 14px;
-      color: #b5b5b5;
+      color: #6a6363;
    }
    ;`
 
