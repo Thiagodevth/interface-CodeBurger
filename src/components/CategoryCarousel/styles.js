@@ -34,7 +34,8 @@ export const ContainerItems = styled.div`
    `;
 
 export const Image = styled.img`
-   width: 210px;
+   width: 200px;
+   height: 160px;
    border-radius: 10px;
    `;
 
@@ -52,9 +53,13 @@ export const Button = styled.button`
    text-align: center;
    color: #ffffff;
    cursor: pointer;
+   transition: 0.2s;
 
    &:hover {
     opacity: 0.8;
+    background: #ffffff;
+    color: #9758a6;
+    border: 2px solid #9758a6;
    }
 
    &:active{

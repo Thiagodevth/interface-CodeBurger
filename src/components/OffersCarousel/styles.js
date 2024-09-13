@@ -6,7 +6,7 @@ export const Container = styled.div`
    flex-direction: column;
    align-items: center;
    gap: 35px;
-   padding: 35px 0;
+   padding: 60px 0;
 
    .rec.rec-arrow {
     background-color: #9758a6;
@@ -40,7 +40,8 @@ export const ContainerItems = styled.div`
    `;
 
 export const Image = styled.img`
-   width: 200px;
+   width: 193px;
+   height: 130px;
    border-radius: 10px;
    margin-bottom: 16px;
    `;
@@ -59,9 +60,13 @@ export const Button = styled.button`
    text-align: center;
    color: #ffffff;
    cursor: pointer;
+   transition: 0.2s;
 
    &:hover {
     opacity: 0.8;
+    background: #ffffff;
+    color: #9758a6;
+    border: 2px solid #9758a6;
    }
 
    &:active{
