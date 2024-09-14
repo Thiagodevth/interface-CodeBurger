@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 import Person from '../../assets/person.svg'
 import Cart from '../../assets/cart.svg'
@@ -14,11 +15,14 @@ import {
 } from "./styles";
 
 export function Header() {
+
+    const history = useHistory()
+
     return (
         <Container>
             <ContainerLeft>
-                <PageLink>Home</PageLink>
-                <PageLink>Ver Produtos</PageLink>
+                <PageLink onClick={() => history.push('/')}>Home</PageLink>
+                <PageLink onClick={() => history.push('/produtos')}>Ver Produtos</PageLink>
             </ContainerLeft>
 
             <ContainerRight>
