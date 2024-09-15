@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { useUser } from "../../hooks/UserContext";
 
 import Person from '../../assets/person.svg'
 import Cart from '../../assets/cart.svg'
@@ -15,12 +16,16 @@ import {
 } from "./styles";
 
 export function Header() {
-
+  const { logout, userData } = useUser()
   const {
     push,
     location: { pathname }
   } = useHistory()
 
+  const logoutUser = () => {
+    logout()
+    push('/login')
+  }
   return (
     <Container>
       <ContainerLeft>
@@ -38,10 +43,11 @@ export function Header() {
         <PageLink>
           <img src={Person} alt="logo pessoa" />
         </PageLink>
-
+        <Line></Line>
+        <PageLinkExit onClick={logoutUser}>Sair</PageLinkExit>
+        <Line></Line>
         <ContainerText>
-          <p>Olá, Thiago</p>
-          <PageLinkExit>Sair</PageLinkExit>
+          <p>Olá, {userData.name}</p>
         </ContainerText>
       </ContainerRight>
 

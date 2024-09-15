@@ -27,26 +27,39 @@ export const PageLink = styled.a`
 export const ContainerRight = styled.div`
    display:flex;
    align-items: center;
-   gap: 20px;`
+   gap: 20px;
+
+   img {
+      width: 28px;
+
+      &:hover{
+         width: 28.7px;
+   }
+   }
+   `;
 
 export const Line = styled.div`
    height: 40px;
-   border-right: 0.5 solid #bababa;
+   border-right: 2px solid #bababa;
    `;
 
 export const ContainerText = styled.div`
-p{
-   font-style: normal;
-   font-weight: 500;
-   font-size: 15px;
-   line-height: 16px;
-   color: #555555;
-   margin-right: 3px
-}
+   display: flex;
+   flex-direction: column;
+   gap: 7px;
+
+   p{
+     font-style: normal;
+     font-weight: 500;
+     font-size: 17px;
+     line-height: 16px;
+     color: #555555;
+     margin-right: 3px
+   }
 `;
 
 export const PageLinkExit = styled.a`
-   font-size: 19px;
+   font-size: 20px;
    font-weight: bold;
    font-style: normal;
    line-height:16px;
@@ -56,7 +69,7 @@ export const PageLinkExit = styled.a`
    cursor: pointer;
 
    &:hover{
-      font-size: 19.4px;
+      font-size: 20.4px;
    }
    `;
 
