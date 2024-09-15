@@ -18,9 +18,10 @@ export const ContainerLeft = styled.div`
 export const PageLink = styled.a`
    cursor: pointer;
    text-decoration: none;
-   color: #555555;
+   color: ${props => props.isActive ? '#975BA6' : '#555555'};
    font-size: 19px;
    line-height: 19px;
+   font-weight: ${props => props.isActive ? 'bold' : 'normal'};;
    `;
 
 export const ContainerRight = styled.div`
@@ -53,6 +54,7 @@ export const PageLinkExit = styled.a`
    align-items: center;
    color: #9758a6;
    cursor: pointer;
+
    &:hover{
       font-size: 19.4px;
    }
