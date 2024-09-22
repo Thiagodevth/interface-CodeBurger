@@ -11,6 +11,7 @@ import Paper from '@mui/material/Paper';
 import api from '../../../services/api'
 import { Container } from './styles'
 import Row from "./row";
+import formatDate from "../../../utils/formateDate";
 
 function Orders() {
   const [orders, setOrders] = useState([])
@@ -31,7 +32,7 @@ function Orders() {
     return {
       name: order.user.name,
       orderId: order._id,
-      date: order.createdAt,
+      date: formatDate(order.createdAt),
       status: order.status,
       products: order.products
     };

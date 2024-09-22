@@ -4,5 +4,4 @@ const formatCurrency = value => {
         currency: 'BRL'
     }).format(value)
 }
-
 export default formatCurrency
