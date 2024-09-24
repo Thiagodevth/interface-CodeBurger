@@ -17,4 +17,8 @@ export const ReactSelectStyle = styled(ReactSelect)`
    .css-13cymwt-control{
       cursor: pointer;              
    }
-   `;                 
+   `;
+
+export const Menu = styled.div``
+
+export const LinkMenu = styled.a``

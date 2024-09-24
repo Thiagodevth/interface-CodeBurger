@@ -24,6 +24,11 @@ const status = [
         label: 'Entregue',
         value: 'Entregue'
     },
+    {
+        id: 6,
+        label: 'Entregue',
+        value: 'Entregue'
+    }
 ]
 
 export default status

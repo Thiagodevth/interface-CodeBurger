@@ -9,9 +9,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 import api from '../../../services/api'
-import { Container } from './styles'
+import { Container, LinkMenu, Menu } from './styles'
 import Row from "./row";
 import formatDate from "../../../utils/formateDate";
+import status from "./order-status";
 
 function Orders() {
   const [orders, setOrders] = useState([])
@@ -43,6 +44,15 @@ function Orders() {
 
   return (
     <Container>
+
+      <Menu>
+        {status && status.map(status => (
+          <LinkMenu>
+            {status.label}
+          </LinkMenu>
+        ))}
+      </Menu>
+
       <TableContainer component={Paper}>
         <Table aria-label="collapsible table">
           <TableHead>
